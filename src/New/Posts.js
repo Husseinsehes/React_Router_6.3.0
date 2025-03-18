@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 //استيراد ملف انشاء الكونتكست
 import { postContext } from "./Postcontext.js";
-import { useContext } from "react";
+import React, { useContext } from "react";
 
 export default function Posts() {
   //تخزين القايمة في المتغير Posts واللي اخدها من اليوزكونتكست اللي اخدتها من من الpostContext اللي احاط بالكود كله هناك وتم امداده بقيمة القابمة كلها
@@ -18,14 +18,14 @@ export default function Posts() {
        {/* تحديد المفتاح لكل عنوان بوست وده للترتيب وتوصي به رياكت عشان تميز طل بوست عن غيره وبعده كده ارسال الاي دي نفسه في الurlعند النقر علي اي عنوان بوست يوجهه لصفحة التفاصيل ليه ومعاه الاي دي اللي بيساوي ال id بتاع المفتاح ايضا وعشان اليوز بارامز تستخرجه من اليurl  وتخزنه فيها 
            وبكده كل عنوان بوست هيظهر تفاصيله هو فقط لانه اتحدد بالادي المبهوث معاه لصفحة التفاصيل واستخراج التفاصيل هناك الtitle . body 
            والposts ده البريفكس الخاص بمسارات الصفحات بتاعة البوستسات وبيمثل هنا التوجه لصفحة التفاصيل عند النقر علي العنوان ياخد الاي دي يضعه في ال url لتستخرجة البارامز واستخرج بيه التفاصيل للبوست */}
-        <Link key={post.id} to={`/Posts/${post.id}`}>
+        <Link key={post.id} to={`/posts/${post.id}`}>
           <div
             style={{ background: "orange", padding: "20px", marginTop: "10px" }}
           >
             <h1>{post.title}</h1>
           </div>
         </Link>
-      </>
+      </ >
     );
   });
   return (

@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 import Contact from "./New/Contact";
 import Posts from "./New/Posts";
 import LayoutPosts from "./New/Layoutposts";
-import PostDetails from "./New/Postdetails";
+import Postdetails from "./New/Postdetails";
 import { postContext } from "./New/Postcontext";//استيراد ملف انشاء الكونتكست لامداد الكود كله بقيمة القايمة 
 import NewPost from "./New/Newpost";
 import DeletePost from "./New/Deletepost";
@@ -85,7 +85,7 @@ function App() {
            {/*بمعني اصح المسار الرئيسي هو posts  يعرض مكون layout بداخله يتم عرض المسارات اللي تحته index والمسار الديناميكي iD لنقل الاي دي عند النقر وعرض البوست وتفاصيله بناء علي الId  وبهد كده مسار اضافة جديد وحذف  كلهم افتراضيا هنا يبدا ب /posts وبعدين اسم المستر delete مثلا بس هنا مش محتاج اكتب بوستس posts كل مرة معاهم فقط وضعتها كبريغكس في البداية  ولكن عند استخدام المسار كلينك في اي مكان بره الاب ده هتضع البريفكس /posts/new هكذا */}  
         <Route path="/posts" element={<LayoutPosts/>}>
            <Route index  element={<Posts />} />
-           <Route path=":postId" element={<PostDetails/>} />
+           <Route path=":postId" element={<Postdetails/>} />
            <Route path="new" element={<NewPost/>} />
            <Route path="delete" element={<DeletePost/>} />
         </Route>
